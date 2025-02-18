@@ -1,0 +1,53 @@
+backend/
+├── app/
+│   ├── api/
+│   │   ├── v1/
+│   │   │   ├── endpoints/
+│   │   │   │   ├── nodes.py       # Node-related API routes
+│   │   │   │   ├── edges.py       # Edge-related API routes
+│   │   │   │   ├── users.py       # User management API
+│   │   │   │   └── auth.py        # Authentication routes
+│   │   │   └── api_v1.py          # APIRouter for version 1
+│   │   └── dependencies/
+│   │       └── dependencies.py    # Dependency injection
+│   │
+│   ├── core/
+│   │   ├── config.py              # Configuration settings (loads .env)
+│   │   ├── security.py            # Security & authentication utilities
+│   │
+│   ├── db/
+│   │   ├── postgres.py            # asyncpg connection pool
+│   │   ├── neo4j.py               # Neo4j connection pool
+│   │   ├── schema.sql             # SQL schema file
+│   │
+│   ├── models/
+│   │   ├── node.py                # Node data model
+│   │   ├── edge.py                # Edge data model
+│   │   ├── user.py                # User data model
+│   │
+│   ├── repositories/
+│   │   ├── node_repository.py     # Database queries for nodes
+│   │   ├── edge_repository.py     # Database queries for edges
+│   │   ├── user_repository.py     # User-related queries
+│   │
+│   ├── schemas/
+│   │   ├── node_schema.py         # Pydantic schemas for validation
+│   │   ├── edge_schema.py         # Pydantic schemas for validation
+│   │   ├── user_schema.py         # Pydantic schemas for validation
+│   │
+│   ├── services/
+│   │   ├── node_service.py        # Business logic for nodes
+│   │   ├── edge_service.py        # Business logic for edges
+│   │   ├── user_service.py        # Business logic for users
+│   │
+│   ├── main.py                    # Application entry point
+│   └── dependencies.py             # Dependency injection setup
+│
+├── tests/
+│   ├── test_api/
+│   ├── test_services/
+│   └── ...
+│
+├── .env                           # Environment variables
+├── requirements.txt               # Python dependencies
+├── Dockerfile                     # Docker configuration
