@@ -1,0 +1,55 @@
+#+setupfile: ~/.emacs.d/init.el
+
+* Motivation
+- Nowadays, people struggle to connect with each other
+- People are always wearing headphones/listening to music
+- Yet people never seem to bond with others about music
+- Music is popularized and pushed forth by media/masses
+- Would like a better way of exploring genuine music taste
+
+* Feature Map
+** Scroll
+- People love scrolling---implement a scrolling algorithm to find new music.
+- Generic explore searching page
+- Advanced filteration system to use the scrolling to explore specific paths
+  down the graph. e.g. a genre or composer or instrumentation combo
+  
+** Graph
+- Huge connection of all music-human related data
+- Nodes will represent music tracks and people
+- Genres will form clusters
+- Composers will form clusters
+- Instrumentation will form clusters
+- People with be connected with others around them based on the tracks they
+  like/interact with the most.
+
+** Stats page
+- TBD, metrics
+
+** Profile
+- Can input user data
+
+* Tech Stack
+** Backend
+- Python fastAPI for async api
+- Redis for caching
+- Celery for task queuing
+
+** Frontend
+- Flutter
+
+** Graph visualization
+- TODO research, starlight?
+
+*** Later: Local cache (isar or hive)
+
+** Database
+- Graph store: Neo4j
+- PostgreSQL with asyncpg for fast music lookup
+  - PGvector for vector recommendation search
+
+* Data APIs
+- Youtube
+- Spotify
+- Musicbrainz
+- OpenOpus

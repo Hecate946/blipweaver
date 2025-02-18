@@ -1,0 +1,96 @@
+#+setupfile: ~/.emacs.d/setupfile.org
+
+* UI Walkthrough for Node Types and Graph Interaction
+
+** General Graph UI Structure
+- Background: A smooth, minimalistic dark or light canvas where nodes float dynamically.
+- Nodes: Each node is a circular or rounded element, color-coded based on type.
+- Edges (Connections): Thin, animated lines between nodes that react when hovered or tapped.
+- Navigation:
+  - Drag to move around the graph.
+  - Pinch to zoom in/out.
+  - Double-tap empty space to reset the view.
+
+** Node Types and Interaction
+
+*** Text Nodes (Articles, Thoughts, Notes)
+- Appearance: A small circle that expands into a floating card when tapped.
+- Expanded View:
+  - Title & Summary displayed on top.
+  - Main content shown in a scrollable panel.
+  - Edit button (if personal) or comment button (if collaborative).
+- Actions:
+  - Tap: Expand to read.
+  - Hold: Modify, tag, or connect to another node.
+  - Swipe Right: Save for later.
+  - Swipe Left: Hide from personal view.
+
+*** Audio Nodes (Music, Podcasts, Recordings)
+- Appearance: Circular node with a play icon in the center.
+- Expanded View:
+  - Waveform preview of the audio file.
+  - Playback controls (Play, Pause, Skip).
+  - Related discussions appear below.
+- Actions:
+  - Tap: Play audio inline.
+  - Hold: Show details (metadata, tags, user notes).
+  - Drag to Another Node: Create an association (e.g., “Inspired By”).
+
+*** Video Nodes (Clips, Performances, Tutorials)
+- Appearance: Circular node with a video thumbnail.
+- Expanded View:
+  - Embedded video player with controls.
+  - Related discussion feed below.
+  - “Expand to Fullscreen” option.
+- Actions:
+  - Tap: Start video playback.
+  - Hold: Show metadata (source, tags, related videos).
+  - Swipe Right: Save for later.
+
+*** Link Nodes (Web References, Research Papers)
+- Appearance: Circular node with a link icon.
+- Expanded View:
+  - Web preview (if available).
+  - Summary or key excerpt.
+  - Tags & related nodes.
+- Actions:
+  - Tap: Open the link in a browser.
+  - Hold: Add personal notes or tag.
+  - Drag to Another Node: Connect ideas (e.g., linking an article to a concept).
+
+*** Image Nodes (Diagrams, Artworks, Mind Maps)
+- Appearance: Thumbnail preview in a rounded node.
+- Expanded View:
+  - Full image view.
+  - Annotations & user comments.
+- Actions:
+  - Tap: Open the full image.
+  - Hold: Add personal notes or tag.
+  - Swipe Right: Save.
+
+*** Interactive Object Nodes (Live Discussions, Custom Tools)
+- Appearance: Pulsing circular node with a unique icon.
+- Expanded View:
+  - Real-time chat or interactive elements.
+  - Live collaboration features.
+- Actions:
+  - Tap: Enter live mode.
+  - Hold: See participant list.
+  - Drag to Another Node: Merge live discussions with existing knowledge.
+
+** Graph Interactions
+- Navigating:
+  - Drag anywhere to move.
+  - Pinch to zoom in or out.
+  - Double-tap empty space to reset focus.
+- Expanding and Collapsing Nodes:
+  - Single Tap: Expands a node’s immediate connections.
+  - Double Tap on Node: Expands deeply related nodes.
+  - Swipe Down: Collapses expanded nodes back into one.
+- Creating New Connections:
+  - Hold + Drag Node to Another Node: Creates a direct relationship.
+  - Choose Connection Type: Label it as *inspired by, contradicts, expands on, complements*.
+  - Connection Lines Adjust Dynamically: Thicker lines for stronger relationships.
+- Tagging & Filtering:
+  - Click on a tag to filter by category (e.g., “Jazz,” “Philosophy”).
+  - Tag strength visualization: More common tags appear larger & bolder.

@@ -1,0 +1,47 @@
+# Global ignores
+.DS_Store
+.env
+*.log
+.vscode/
+.idea/
+*.iml
+
+# Flutter (Frontend)
+frontend/.dart_tool/
+frontend/.packages
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/pubspec.lock
+frontend/build/
+frontend/generated/
+frontend/.fvm/
+frontend/.firebase/
+frontend/.android/
+frontend/.ios/
+frontend/.gradle/
+frontend/.metadata
+
+# Python (Backend)
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.venv/
+backend/venv/
+backend/env/
+backend/.mypy_cache/
+backend/.tox/
+backend/.coverage
+backend/instance/
+backend/*.db
+backend/migrations/
+backend/alembic/
+backend/logs/
+
+# FastAPI dependencies
+backend/poetry.lock
+backend/pip-log.txt
+backend/pip-delete-this-directory.txt
+
+# IDE files
+*.swp
+*.swo
+*.swn

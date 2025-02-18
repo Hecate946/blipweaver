@@ -1,0 +1,85 @@
+#+setupfile: ~/.emacs.d/setupfile.org
+
+* The Graph of Everything
+
+** Overview
+A revolutionary interactive knowledge and media graph that evolves dynamically as users explore, contribute, and connect information. Unlike traditional social media feeds, this platform replaces algorithmic recommendation systems with an intuitive, evolving network of relationships between music, ideas, media, and people.
+
+** Core Concept
+- A **global, interconnected graph** that organizes knowledge dynamically.
+- Users interact with a **living system** that evolves based on their actions.
+- Combines **music discovery, research, thought organization, and social connection**.
+- Users can **navigate, modify, and contribute** to the graph in real time.
+
+** Graph Structure
+- **Global Graph:** A massive shared network of interconnected knowledge.
+- **Personal Graphs:** Users maintain personal versions that can integrate with the global graph.
+- **Nodes:** Fundamental data points, representing:
+  - Music tracks, albums, and artists
+  - Books, papers, and research
+  - Concepts, ideas, and thoughts
+  - Videos, images, and multimedia content
+  - People, conversations, and shared insights
+- **Edges:** Relationships between nodes based on user interactions, AI-driven similarity, and tagging.
+
+** Node Types and Interaction
+- **Text Nodes:** Articles, notes, definitions, summaries.
+- **Audio Nodes:** Music, podcasts, user recordings.
+- **Video Nodes:** Clips, performances, lectures.
+- **Link Nodes:** Web references, citations, research papers.
+- **Image Nodes:** Visual diagrams, artwork, mind maps.
+- **Interactive Objects:** Custom tools, live discussions, evolving content.
+
+** User Interaction
+- **Tap a Node:** Expand connections and see related content.
+- **Drag a Node:** Rearrange the graph for better visualization.
+- **Hold a Node:** Modify, add notes, or tag it.
+- **Swipe Left:** Hide a node from personal view.
+- **Swipe Right:** Save a node for future reference.
+- **Pinch to Zoom:** Expand or collapse clusters dynamically.
+- **Tap & Hold + Drag to Another Node:** Create custom relationships between nodes.
+
+** Tagging System
+- **AI-assisted and user-generated tagging.**
+- Multi-dimensional categorization for deep filtering and organization:
+  - **Category Tags:** "Music," "Philosophy," "Science"
+  - **Emotion Tags:** "Calm," "Energetic," "Melancholic"
+  - **Context Tags:** "Good for Studying," "Late Night Listening"
+  - **Connection Tags:** "Inspired By," "Similar To," "Contrasts With"
+- Tags dynamically refine the graph’s structure and recommendations.
+
+** Graph Exploration
+- **Surfing Mode:** Freeform navigation through organic node expansion.
+- **Deep Dive Mode:** Zoom into specific knowledge clusters.
+- **Graph Collapse & Reset:** Simplify and restructure views dynamically.
+
+** User Content Contribution
+- **Private Nodes:** Personal thoughts and connections.
+- **Shared Nodes:** Collaborative workspaces.
+- **Public Nodes:** Contributions to the Global Graph.
+
+** Social and Viral Features
+- **“Who Thinks Like You?”** – AI-generated connections with similar users.
+- **Collaborative Graphs** – Groups co-build shared knowledge spaces.
+- **Graph Sharing** – Export and share graph visualizations on social media.
+- **Trending Graphs** – View emerging connections in real time.
+
+** Evolution and Learning
+- **Adaptive AI System** – Learns from user behavior to refine graph organization.
+- **Time Travel Mode** – Allows users to revisit past versions of their knowledge graph.
+- **AI-powered Memory Assistant** – Helps recall and resurface important discoveries.
+
+** Technical Architecture
+- **Backend:** FastAPI with async Redis caching.
+- **Graph Database:** Neo4j for storing relationships between nodes.
+- **Search & Recommendations:** PostgreSQL with PGVector for embedding-based discovery.
+- **Frontend:** Flutter with WebGL/D3.js for interactive visualization.
+- **Real-time Updates:** WebSockets for collaborative graph editing.
+- **Decentralized Storage (Future Expansion):** Potential integration with IPFS or blockchain.
+
+** Next Steps
+1. Develop UI wireframes for core graph interactions.
+2. Build MVP with basic graph exploration and node linking.
+3. Implement tagging and personalization system.
+4. Launch beta testing for user feedback and iteration.
+

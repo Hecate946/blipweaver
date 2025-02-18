@@ -1,0 +1,93 @@
+#+setupfile: ~/.emacs.d/setupfile.org
+
+* Backend Structure
+#+begin_src
+/backend
+├── app/
+│   ├── api/
+│   │   ├── v1/
+│   │   │   ├── endpoints/
+│   │   │   │   ├── endpoint1.py
+│   │   │   │   └── endpoint2.py
+│   │   │   └── api_v1.py        # APIRouter for version 1
+│   │   └── dependencies/
+│   │       └── dependencies.py  # Dependency injection
+│   │
+│   ├── core/
+│   │   ├── config.py            # Configuration settings
+│   │   └── security.py          # Security-related utilities
+│   │
+│   ├── db/
+│   │   ├── base.py              # Base SQLAlchemy models
+│   │   ├── session.py           # Database session management
+│   │   └── init_db.py           # Database initialization
+│   │
+│   ├── models/
+│   │   ├── model1.py
+│   │   └── model2.py
+│   │
+│   ├── repositories/
+│   │   ├── repository1.py
+│   │   └── repository2.py
+│   │
+│   ├── schemas/
+│   │   ├── schema1.py
+│   │   └── schema2.py
+│   │
+│   ├── services/
+│   │   ├── service1.py
+│   │   └── service2.py
+│   │
+│   ├── main.py                  # Application entry point
+│   └── dependencies.py          # Dependency injection setup
+│
+├── alembic/
+│   ├── versions/                # Database migration scripts
+│   └── env.py                   # Alembic environment configuration
+│
+├── tests/
+│   ├── test_api/
+│   ├── test_services/
+│   └── ...
+│
+├── .env                         # Environment variables
+├── requirements.txt             # Python dependencies
+└── Dockerfile                   # Docker configuration
+#+end_src
+
+* Frontend Structure
+#+begin_src
+/frontend
+├── lib/
+│   ├── core/
+│   │   ├── utils/               # General utilities (e.g., formatters, extensions)
+│   │   ├── errors/              # Error handling (exceptions, failures)
+│   │   ├── usecases/            # Base UseCase classes
+│   │   └── constants.dart       # Application-wide constants
+│   │
+│   ├── features/
+│   │   ├── feature_name/
+│   │   │   ├── data/
+│   │   │   │   ├── models/      # Data Transfer Objects (DTOs)
+│   │   │   │   ├── datasources/ # Remote and local data sources
+│   │   │   │   └── repositories/ # Repository implementations
+│   │   │   │
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/    # Core business entities
+│   │   │   │   ├── repositories/ # Abstract repository interfaces
+│   │   │   │   └── usecases/    # Business logic
+│   │   │   │
+│   │   │   └── presentation/
+│   │   │       ├── pages/       # UI screens
+│   │   │       ├── widgets/     # Reusable UI components
+│   │   │       └── providers/   # State management (e.g., Riverpod, Bloc)
+│   │   │
+│   │   └── another_feature/
+│   │       └── ...              # Same structure as feature_name
+│   │
+│   ├── main.dart                # Application entry point
+│   └── injection_container.dart # Dependency injection setup
+│
+├── test/                        # Unit and widget tests
+└── pubspec.yaml                 # Project dependencies and metadata
+#+end_src
