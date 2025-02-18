@@ -31,17 +31,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_riverpod: ^2.3.0  # State management
-  dio: ^5.1.0  # API client
-  flame: ^1.6.0  # For physics-based graph interactions
-  web_socket_channel: ^2.3.0  # WebSocket support
-  json_annotation: ^4.9.0
-  neo4j_dart: ^1.1.0  # Neo4j integration
-
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  flutter_riverpod: ^2.6.1
+  dio: ^5.8.0+1
+  shared_preferences: ^2.5.2
+  get_it: ^8.0.3
 
 dev_dependencies:
   flutter_test:
