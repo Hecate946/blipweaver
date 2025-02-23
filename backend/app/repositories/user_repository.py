@@ -33,3 +33,12 @@ async def is_user_verified(email: str):
     query = "SELECT is_verified FROM users WHERE email = $1"
     result = await db.fetchrow(query, email)
     return result["is_verified"] if result else False
+
+async def delete_user(email: str):
+    query = """
+    DELETE FROM users
+    WHERE email = $1
+    RETURNING id, username, email, hashed_password, is_verified, created_at;
+    """
+    deleted_user = await db.fetchrow(query, email)
+    return deleted_user

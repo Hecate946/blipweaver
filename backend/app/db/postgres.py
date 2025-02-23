@@ -44,6 +44,12 @@ class Database:
         logger.info(f"Fetching single row: {query} | Params: {args}")
         async with self.pool.acquire() as conn:
             return await conn.fetchrow(query, *args)
+        
+    async def fetchval(self, query: str, *args):
+        """Fetch a single value from the database"""
+        logger.info(f"Fetching single value: {query} | Params: {args}")
+        async with self.pool.acquire() as conn:
+            return await conn.fetchval(query, *args)
 
     async def run_schema(self):
         """Read and execute schema.sql file on startup"""

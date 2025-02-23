@@ -13,3 +13,9 @@ class UserResponse(BaseModel):
     id: int
     username: str
     email: EmailStr
+
+class UserVerification(BaseModel):
+    email: EmailStr
+
+class UserToken(BaseModel):
+    access_token: str
